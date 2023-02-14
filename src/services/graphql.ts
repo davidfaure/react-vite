@@ -30,3 +30,29 @@ export const getShips = () =>
       `,
     })
     .then((res) => res.data.ships);
+
+export const getShipDetail = (id: string | undefined) =>
+  client
+    .query({
+      query: gql`
+        query Ship($shipId: ID!) {
+          ship(id: $shipId) {
+            id
+            name
+            type
+            model
+            image
+            url
+            active
+            year_built
+            weight_kg
+            roles
+            home_port
+          }
+        }
+      `,
+      variables: {
+        shipId: id,
+      },
+    })
+    .then((res) => res.data.ship);

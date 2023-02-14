@@ -1,6 +1,6 @@
 type Color = "grey" | "black" | "orange" | "purple" | "blue";
 
-export const setColorTag = (cargoType: string): Color => {
+export const setColorTag = (cargoType: string | undefined): Color => {
   switch (cargoType) {
     case "Tug":
       return "black";
