@@ -1,0 +1,43 @@
+@mixin flex-all-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-evenly {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@mixin flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin title {
+  font-size: 1.5vw;
+  font-weight: 600;
+}
+
+@mixin text {
+  font-size: 1vw;
+  font-weight: 600;
+}
+
+@mixin span {
+  font-size: 0.8vw;
+  font-weight: 400;
+}

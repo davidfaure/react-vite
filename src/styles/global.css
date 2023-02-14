@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&family=Roboto&display=swap");
+.ships__wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #f7f8fc;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 12px;
+}
+
+.ship {
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+.ship__details {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  padding: 2%;
+  background-color: #fff;
+  transform: translateY(210%) translateY(-88px) translateZ(0);
+  transform: translateY(140%) translateY(-88px) translateZ(0);
+  transition: transform 0.5s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.ship__details h1 {
+  font-size: 1.5vw;
+  font-weight: 600;
+}
+.ship__details__tag {
+  border-radius: 50px;
+  font-size: 12px;
+  margin: 0;
+  color: #fff;
+  padding: 2px 10px;
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.ship__image {
+  transition: all 0.3s ease-out;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 45%;
+  display: inline-block;
+}
+.ship__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.grey {
+  background: #cccccc;
+}
+
+.black {
+  background: #000;
+}
+
+.orange {
+  background: rgb(233, 102, 8);
+}
+
+.purple {
+  background: purple;
+}
+
+.blue {
+  background: rgb(21, 108, 185);
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  overscroll-behavior: none;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  font-family: "Montserrat", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+  font-style: normal;
+  font-size: clamp(0.5rem, 4vw, 2rem);
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+canvas {
+  display: block;
+  max-width: 100%;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  pointer-events: none;
+  z-index: 9;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*
+  10. remove list-style ti ul, ol
+*/
+ol,
+ul {
+  list-style: none;
+}
+
+/*
+  11. remove decoration and outline for a link
+*/
+a:visited,
+a:focus,
+a:active,
+a:link {
+  text-decoration: none;
+  outline: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}/*# sourceMappingURL=global.css.map */

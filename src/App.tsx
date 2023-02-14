@@ -1,28 +1,8 @@
-import { useState, useEffect } from 'react'
-import './App.css'
-import { getShips } from './services/graphql'
-import { Ships } from './models'
+import AllShips from './components/AllShips'
 
 const App = () => {
-  const [ships, setShips] = useState<Ships[]>([])
 
-  useEffect(() => {
-    getShips().then(setShips)
-  });
-
-
-  console.log(ships, "SHIPS");
-
-  return (
-    <div className="App">
-      {ships.map((s) => (
-        <div className="ship" key={s.id}>
-          <p>{s.name}</p>
-          <img src={s.image} alt={s.name} />
-        </div>
-      ))}
-    </div>
-  )
+  return <AllShips />
 }
 
 export default App

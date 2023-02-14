@@ -1,0 +1,114 @@
+.ships__wrapper {
+  @include flex-center();
+  background-color: $bg-color;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 12px;
+}
+
+.ship {
+  @include border-radius(16px);
+  background-color: $white-color;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+
+  &__details {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    padding: 2%;
+    background-color: #fff;
+    transform: translateY(240%) translateY(-88px) translateZ(0);
+    // transform: translateY(140%) translateY(-88px) translateZ(0);
+    transition: transform 0.5s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    &:hover {
+      transform: translateY(150%) translateZ(0);
+    }
+
+    & h1 {
+      @include title();
+    }
+
+    &__tag {
+      border-radius: 50px;
+      font-size: 12px;
+      margin: 0;
+      color: #fff;
+      padding: 2px 10px;
+      text-transform: uppercase;
+      width: fit-content;
+    }
+
+    &__info {
+      @include flex-center-between();
+    }
+
+    &__year,
+    &__active {
+      @include text();
+      @include flex-center-evenly();
+
+      gap: 10px;
+
+      & span {
+        @include span();
+      }
+    }
+
+    &__button {
+      width: fit-content;
+      border: none;
+      background-color: rgb(0, 81, 255);
+      color: $white-color;
+      padding: 5px 15px;
+      align-self: center;
+      @include border-radius(16px);
+      @include text();
+      cursor: pointer;
+    }
+  }
+
+  &__image {
+    transition: all 0.3s ease-out;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 45%;
+    display: inline-block;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.grey {
+  background: #cccccc;
+}
+
+.black {
+  background: #000;
+}
+
+.orange {
+  background: rgb(233, 102, 8);
+}
+
+.purple {
+  background: purple;
+}
+
+.blue {
+  background: rgb(21, 108, 185);
+}
