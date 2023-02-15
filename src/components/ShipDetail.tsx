@@ -13,13 +13,9 @@ const ShipDetail = () => {
   const { id } = useParams();
   const { shipDetail: ship } = useLocation().state;
 
-  console.log(location);
-
-
   useEffect(() => {
     getShipDetail(id).then(setShipDetail)
   }, [id]);
-  console.log(shipDetail, "ID")
 
   if (!shipDetail) {
     return <div className="ship__detail__loading">
@@ -39,10 +35,13 @@ const ShipDetail = () => {
           <span className={`ship__details__tag ${setColorTag(ship.type)}`}>{ship.type}</span>
           <div className="ship__detail__description__roles">
             {shipDetail.roles?.map((role: string) =>
-              <div><TbShip /> <p>{role}</p></div>
+              <div className="ship__detail__description__roles__item">
+                <TbShip />
+                <p>{role}</p>
+              </div>
             )}
           </div>
-          <div className="ship__details__info">
+          <div className="ship__detail__description__info">
             <p className="ship__details__year"><span>Built year:</span> {ship.year_built ? ship.year_built : "unknown"}</p>
             <div className="ship__details__active">
               <p>Active :</p>

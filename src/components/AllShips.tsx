@@ -20,13 +20,11 @@ const AllShips = () => {
     getShips().then(setShips)
   });
 
-  console.log(typeChoice)
-
   return (
     <section className="ships__container">
       <select onChange={onChange}>
         <option value="">--Filter by Type--</option>
-        {typeShip.map((type) => <option value={`${type}`}>{type}</option>)}
+        {typeShip.map((type) => <option key={type} value={`${type}`}>{type}</option>)}
       </select>
       <div className="ships__wrapper">
         {ships
